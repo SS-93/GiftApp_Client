@@ -14,6 +14,10 @@ import ListGroup from "./components/listGroup/ListGroup";
 import { useState, useEffect } from "react";
 import AddItem from "./components/addItem/AddItem";
 
+import ItemEditor from "./components/itemEditor/ItemEditor";
+
+
+
 function App() {
   const [token, setToken] = useState("");
   const [userId, setUserId] = useState("");
@@ -124,6 +128,7 @@ function App() {
         <Route path="Login" element={<Login setToken={updateToken} />} />
         <Route path="List" element={<ListGroup setToken={updateToken} />} />
         <Route path="Add" element={<AddItem setToken={updateToken} />} />
+        <Route path="Edit" element={<ItemEditor setToken={updateToken} />} />
       </Routes>
     </BrowserRouter>
   );
